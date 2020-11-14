@@ -12,24 +12,24 @@ const client = new ApolloClient({
 	})
 });
 
-const query = gql`
-  query {
-    allPersons {
-		name
-		phone
-		address{
-			city
-			street
-		}
-		id
-    }
-  }
-`;
+// const query = gql`
+//   query {
+//     allPersons {
+// 		name
+// 		phone
+// 		address{
+// 			city
+// 			street
+// 		}
+// 		id
+//     }
+//   }
+// `;
 
-client.query({ query })
-	.then((response) => {
-		console.log(response.data);
-	});
+// client.query({ query })
+// 	.then((response) => {
+// 		console.log(response.data);
+// 	});
 
 ReactDOM.render(
 	<ApolloProvider client={client}>
