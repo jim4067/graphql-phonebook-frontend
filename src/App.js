@@ -14,7 +14,10 @@ const ALL_PERSONS = gql`
 `;
 
 const App = () => {
-	const result = useQuery(ALL_PERSONS);
+	const result = useQuery(ALL_PERSONS,/* {
+		the code below makes endless queries when a new person is added
+		pollInterval: 2000
+	} */ );
 
 	if (result.loading) {
 		return <div>loading...</div>
