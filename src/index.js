@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-import { ApolloClient, ApolloProvider, HttpLink, InMemoryCache, gql } from '@apollo/client';
+import { ApolloClient, ApolloProvider, HttpLink, InMemoryCache } from '@apollo/client';
 
 const client = new ApolloClient({
 	cache: new InMemoryCache(),
@@ -11,25 +11,6 @@ const client = new ApolloClient({
 		uri: 'http://localhost:4000'
 	})
 });
-
-// const query = gql`
-//   query {
-//     allPersons {
-// 		name
-// 		phone
-// 		address{
-// 			city
-// 			street
-// 		}
-// 		id
-//     }
-//   }
-// `;
-
-// client.query({ query })
-// 	.then((response) => {
-// 		console.log(response.data);
-// 	});
 
 ReactDOM.render(
 	<ApolloProvider client={client}>
