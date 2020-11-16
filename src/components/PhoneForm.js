@@ -13,7 +13,7 @@ const PhoneForm = ({ notify }) => {
     const submit = (event) => {
         event.preventDefault();
 
-        changeNumber({ varibles: { name, phone } });
+        changeNumber({ variables: { name, phone } });
         console.log("the name contains", name)
         console.log("the phone contains", phone)
 
